@@ -17,7 +17,7 @@ def get_requirement(file_path:str)->List[str]:
 
 __version__ = "0.0.4"
 REPO_NAME = "Connector-PYPI-Package"
-PKG_NAME= "Monogodb-Connect"
+PKG_NAME= "Monogodb-Connect-automation"
 AUTHOR_USER_NAME = "Nithish3115"
 AUTHOR_EMAIL = "nithish031105@gmail.com"
 
