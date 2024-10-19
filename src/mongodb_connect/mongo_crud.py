@@ -7,7 +7,7 @@ from pymongo import MongoClient
 class MongoOperation:
     _collection = None  # Protected variable
     _database = None
-    
+
     def __init__(self, client_url: str, database_name: str, collection_name: str = None):
         self.client_url = client_url
         self.database_name = database_name
