@@ -1,11 +1,15 @@
 from setuptools import setup, find_packages
 from typing import List
+import os
 
 with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()     
-   
+
 HYPEN_E_DOT='-e .'
 def get_requirement(file_path:str)->List[str]:
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"The file {file_path} does not exist.")
+
     requirements=[]
     with open(file_path) as f:
         requirements=f.readlines()
