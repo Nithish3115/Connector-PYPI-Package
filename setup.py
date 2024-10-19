@@ -3,7 +3,7 @@ from typing import List
 import os
 
 with open('README.md', 'r', encoding='utf-8') as f:
-    long_description = f.read()     
+    long_description = f.read()
 
 HYPEN_E_DOT='-e .'
 def get_requirement(file_path:str)->List[str]:
@@ -32,7 +32,7 @@ setup(
     author_email=AUTHOR_EMAIL,
     description="A python package for connecting with database.",
     long_description=long_description,
-    long_description_content="text/markdown",
+    long_description_content_type="text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
     project_urls={
         "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
@@ -40,4 +40,4 @@ setup(
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     # install_requires=get_requirement("./requirements_dev.txt")
-    )
+)
