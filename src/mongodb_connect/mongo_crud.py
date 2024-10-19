@@ -12,7 +12,6 @@ class MongoOperation:
         self.client_url = client_url
         self.database_name = database_name
         self.collection_name = collection_name
-
     def create_mongo_client(self):
         """Create a MongoDB client."""
         return MongoClient(self.client_url)
@@ -32,7 +31,6 @@ class MongoOperation:
         return self._collection
 
     def insert_record(self, record: dict, collection_name: str) -> Any:
-        """Insert a record into the specified collection."""
         collection = self.create_collection()
         if isinstance(record, list):
             for data in record:
