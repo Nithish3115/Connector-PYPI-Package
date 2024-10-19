@@ -5,5 +5,7 @@ pandas
 numpy
 ensure
 pytest
+tox==3.24.5
+tox-gh-actions==1.1.0
 
 -e .
