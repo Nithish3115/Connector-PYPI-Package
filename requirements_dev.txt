@@ -4,6 +4,8 @@ dnspython
 pandas
 numpy
 ensure
+tox
+tox-gh-actions
  
 
 -e .
