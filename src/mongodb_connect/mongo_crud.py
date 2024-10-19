@@ -22,7 +22,7 @@ class MongoOperation:
         if self._database is None:
             client = self.create_mongo_client()
             self._database = client[self.database_name]
-        return self._database 
+        return self._database
 
     def create_collection(self):
         """Create or get the collection."""
@@ -45,14 +45,12 @@ class MongoOperation:
     def bulk_insert(self, datafile: str, collection_name: str = None):
         """Bulk insert records from a file into the specified collection."""
         self.path = datafile
-        
         if self.path.endswith('.csv'):
             dataframe = pd.read_csv(self.path, encoding='utf-8')
         elif self.path.endswith(".xlsx"):
             dataframe = pd.read_excel(self.path, encoding='utf-8')
         else:
             raise ValueError("Unsupported file format. Please use .csv or .xlsx.")
-        
         datajson = json.loads(dataframe.to_json(orient='records'))
         collection = self.create_collection()
         collection.insert_many(datajson)
