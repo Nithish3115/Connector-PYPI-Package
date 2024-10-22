@@ -19,7 +19,7 @@ def get_requirement(file_path:str)->List[str]:
             requirements.remove(HYPEN_E_DOT)
     return requirements
 
-__version__ = "0.0.4"
+__version__ = "0.0.5"
 REPO_NAME = "Connector-PYPI-Package"
 PKG_NAME= "Monogodb-Connect-automation"
 AUTHOR_USER_NAME = "Nithish3115"
